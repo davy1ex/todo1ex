@@ -11,4 +11,4 @@ $sql = 'INSERT INTO task(title) VALUES(:task)';
 $query = $pdo -> prepare($sql);
 $query -> execute(['task' => $task]);
 
-header('Location: /example.php');
+header('Location: /all.php');
