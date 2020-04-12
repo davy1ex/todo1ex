@@ -1,0 +1,7 @@
+tast
+  -- id
+  -- title
+  -- body
+  -- pubdate
+  -- status
+  -- priority

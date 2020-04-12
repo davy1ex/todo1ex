@@ -1,0 +1,173 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #181a1b !important;
+    color: #e8e6e3 !important;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 10px;
+        width: 95%;
+    }
+  }
+
+@media only screen and (min-width: 600px) {
+    .container {
+        margin-top: 10px;
+        width: 50%;
+    }
+}
+
+.row {
+    height: 100%;
+}
+
+.col, .col-2 {
+    padding: 0 !important;
+}
+
+.name_list {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+
+    font-size: 1.4em;
+}
+
+.tasks, .menu {
+    padding-top: 30px !important;
+}
+
+.menu {
+    background: #1a1d21;
+    border-right: 1px solid #212224;
+}
+
+.menu li:not(:last-child) {
+    padding-bottom: 10px !important;
+}
+
+.active {
+    background: #1b1d2d;
+}
+
+
+a, a:visited, a:hover {
+    color: #e8e6e3 !important;
+    
+    text-decoration: none !important;
+}
+
+
+
+.tasks {
+    width: 100% !important;
+    margin: 0 auto;
+    /* padding: 0 !important; */
+}
+
+.container > .title {
+    text-align: center;
+    font-size: 5em;
+}
+
+.add_tast_field {
+    width: 90%;
+    margin: auto;
+    height: 40px;
+    line-height: 38px;
+}
+
+input[type="text"], input[type="text"]:focus {
+    float: left;
+    /* width: 90%; */
+    background: #1A1D21;
+    border: 1px solid #1C1D1F;
+    color: #e8e6e3;
+    box-shadow: 0 0 10px #15171c !important;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #1e2861;
+}
+ 
+/* button  {
+    background: #3F444D !important;
+    color: white !important;
+    border: 1px solid #15171c !important;
+    margin-top: 5px;
+    float: right;
+    width: 10%;
+    margin-top: 0px !important;
+    box-shadow: 0 0 10px #15171c !important;
+} */
+
+.tasklist ul {
+    padding-left: 0 !important;
+}
+
+.tasklist li {
+    display: flex;
+    /* color: black; */
+    /* background: white; */
+    background: #181a1b;
+
+    box-shadow: 0 0 10px #15171c !important;
+    border: 1px solid #15171c;
+    padding: 10px;
+    border-radius: 10px;
+    /* margin: 20px; */
+    width: 90%;
+    margin: auto;
+}
+
+
+
+li .title {
+    width: 60%;
+    
+    margin-left: 5px;
+}
+
+.tasklist li:hover {
+    background: #191a28;
+}
+
+
+
+.checkbox  {
+    width: 15px;
+    margin: 5px 0;
+    height:15px;
+    background: #181a1b !important;
+    color: white !important;
+    border: 1px solid #707070 !important;
+    border-radius: 2px;;
+}
+
+
+.tasklist li:first-child {
+    margin-top: 10px;
+}
+
+.tasklist li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+
+.pubdate {
+    /* color: black; */
+    border-radius: 10px;
+    /* width: 20%; */
+    margin-left: auto !important;
+    text-align: right;
+}
