@@ -16,6 +16,6 @@ $query -> execute();
 
 $rows = $query -> fetchAll();
 
-
+$data['cookie'] = $_COOKIE['user'];
 // echo $twig->render('example.html.twig', ['rows' => $rows]);
 echo $twig -> render('base.html.twig', ['rows' => $rows, 'name_list' => $name_list]);

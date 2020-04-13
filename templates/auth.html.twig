@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <form action="modules/reg.php" method="POST">
+                <p>
+                    <input type="text" class="form-control" placeholder="login" name=login>
+                </p>
+
+                <p>
+                    <input type="password" class="form-control" placeholder="password" name="password">
+                </p>
+
+                <p>
+                    <input type="password" class="form-control" placeholder="retry password" name="password2">
+                </p>
+
+                <p>
+                    <button type="submit">reg</button>
+                </p>
+            </form>
+        </div>
+
+        <div class="col">
+            <form action="modules/check.php" method="POST">
+                <p>
+                    <input type="text" class="form-control" placeholder="login" name=login>
+                </p>
+
+                <p>
+                    <input type="password" class="form-control" placeholder="password" name="password">
+                </p>
+
+                <p>
+                    <button type="submit">reg</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

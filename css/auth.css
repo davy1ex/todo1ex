@@ -1,0 +1,17 @@
+form {
+    padding: 10px;
+}
+
+input[type="text"], input[type="text"]:focus,
+input[type="password"], input[type="password"]:focus {
+    /* float: left; */
+    width: 25%;
+    background: #1A1D21;
+    border: 1px solid #1C1D1F;
+    color: #e8e6e3;
+    box-shadow: 0 0 10px #15171c !important;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #1e2861;
+}
