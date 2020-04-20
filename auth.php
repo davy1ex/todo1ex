@@ -18,4 +18,4 @@ $twig = new Environment($loader);
 
 
 // echo $twig->render('example.html.twig', ['rows' => $rows]);
-echo $twig -> render('auth.html.twig');//, ['rows' => $rows, 'name_list' => $name_list]);
+echo $twig -> render('auth.html');//, ['rows' => $rows, 'name_list' => $name_list]);

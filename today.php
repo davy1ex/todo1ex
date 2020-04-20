@@ -3,7 +3,7 @@
 
 
 require('./modules/twig.php');
-require('./modules/configDB.php');
+require('./modules/taskDB.php');
 $name_list = "Today";
 $query = $pdo -> prepare('SELECT * FROM `task` ORDER BY `id` DESC');
 $query -> execute();

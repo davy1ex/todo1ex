@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/auth.css">
+    <title>auth</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="row">
+    <div class="col">
+        <form action="modules/reg.php" method="POST">
+            <p>
+                <input type="text" class="form-control" placeholder="login" name=login>
+            </p>
+
+            <p>
+                <input type="password" class="form-control" placeholder="password" name="password">
+            </p>
+
+            <p>
+                <input type="password" class="form-control" placeholder="retry password" name="password2">
+            </p>
+
+            <p>
+                <button type="submit">sign up</button>
+            </p>
+        </form>
+    </div>
+
+    <div class="col">
+        <form action="modules/check.php" method="POST">
+            <p>
+                <input type="text" class="form-control" placeholder="login" name="login">
+            </p>
+
+            <p>
+                <input type="password" class="form-control" placeholder="password" name="password">
+            </p>
+
+            <p>
+                <button type="submit">sign in</button>
+            </p>
+        </form>
+    </div>
+</div>
+{% endblock %}

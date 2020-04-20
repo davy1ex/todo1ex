@@ -1,5 +1,5 @@
 <?php
-include 'configDB.php';
+include 'taskDB.php';
 $id = $_GET['id'];
 
 $sql = 'DELETE FROM `task` WHERE `id`= ?';

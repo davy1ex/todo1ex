@@ -23,13 +23,8 @@
             <ul>
                 <li class="nav active"><a href="/all.php">All</a></li>
                 <li class="nav"><a href="/today.php">Today</a></li>
-                {{ cookie['name'] }}
-                {% if app.request.cookies.get('user') == '' %}
-                    <hr>
-                    <li><a href="/auth.php">Auth</a></li>
-                    
-                {% endif %}
-                {{ cookie }}
+                
+                {{ app.request.cookies.get('user') }}
                 <li><a href="/modules/exit.php">Exit</a></li>
             </ul>
         </div>

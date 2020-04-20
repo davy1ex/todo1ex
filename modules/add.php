@@ -5,7 +5,7 @@ if ($task == '') {
     echo 'Try again';
     exit();
 }
-require 'configDB.php';
+require 'taskDB.php';
 
 $sql = 'INSERT INTO task(title) VALUES(:task)';
 $query = $pdo -> prepare($sql);

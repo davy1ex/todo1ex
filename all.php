@@ -9,13 +9,14 @@ $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader);
 
 
-require('modules/configDB.php');
+require('modules/taskDB.php');
 $name_list = "All";
 $query = $pdo -> prepare('SELECT * FROM `task` ORDER BY `id` DESC');
 $query -> execute();
 
 $rows = $query -> fetchAll();
 
-$data['cookie'] = $_COOKIE['user'];
+// $data['cookie'] = $_COOKIE['name'];
 // echo $twig->render('example.html.twig', ['rows' => $rows]);
-echo $twig -> render('base.html.twig', ['rows' => $rows, 'name_list' => $name_list]);
+// echo $twig -> render('base.html.twig', ['rows' => $rows, 'name_list' => $name_list, 'cookie' => $_COOKIE['user']]);
+echo $twig -> render('tasks.html', ['rows' => $rows, 'name_list' => $name_list]);

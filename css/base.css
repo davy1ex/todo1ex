@@ -3,3 +3,7 @@ body {
     color: #e8e6e3 !important;
 }
 
+.row {
+    padding: 0 !important;
+    margin: 0 !important;
+}
