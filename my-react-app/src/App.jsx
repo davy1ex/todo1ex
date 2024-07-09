@@ -1,40 +1,19 @@
 import {useState} from 'react'
+import {useDispatch} from 'react-redux';
+
+import {addTodo} from './store/todoSlice'
+
 import './App.css'
+import TodoInputField from "./components/TodoInputField.jsx";
+import TodoList from "./components/TodoList.jsx";
 
 function App() {
-    const [todos, setTodos] = useState([])
     const [text, setText] = useState('')
+    const dispatch = useDispatch();
 
-    const addTodo = () => {
-        if (text.trim().length) {
-            console.log('inputed ' + text)
-
-            setTodos(
-                [
-                    ...todos,
-                    {
-                        id: new Date().toISOString(),
-                        text: text,
-                        completed: false,
-                    }])
-            console.log('and now todos is: ' + todos)
-            console.log(todos)
-        }
-        setText('')
-
-
-    }
-
-    function toggleTodoCompleted(id) {
-        setTodos(todos =>
-            todos.map(todo =>
-                todo.id === id ? {...todo, completed: !todo.completed} : todo
-            )
-        );
-    }
-
-    function removeTodo(id) {
-        setTodos(todos => todos.filter(todo => todo.id !== id))
+    const addTask = () => {
+        dispatch(addTodo({text}));
+        setText('');
     }
 
 
@@ -42,38 +21,13 @@ function App() {
         <div className={'App'}>
             <h1>Todo1ex</h1>
             <p>One task, One check</p>
+            
             <label>
-                <input
-                    value={text}
-                    onChange={e => setText(e.target.value)}
-                    onKeyDown={e => {
-                        if (e.key === 'Enter') {
-                            addTodo();
-                        }
-                    }}
-                />
-                <button onClick={addTodo}>Add</button>
+                < TodoInputField text={text} handleInput={setText} handleSubmit={addTask} />
+                <button onClick={addTask}>Add</button>
             </label>
 
-            <div className={'tasks-container'}>
-                {
-                    todos.map(todo =>
-                        <div className={'tasks-item'} key={todo.id}>
-                            <input
-                                type={'checkbox'}
-                                checked={todo.completed}
-                                onChange={() => {
-                                    toggleTodoCompleted(todo.id)
-                                }}>
-                            </input>
-                            {todo.text}
-                            <div className={'task-remove'} onClick={() => {removeTodo(todo.id)}}>
-                                |x|
-                            </div>
-                        </div>
-                    )
-                }
-            </div>
+            < TodoList />
         </div>
     )
 }
