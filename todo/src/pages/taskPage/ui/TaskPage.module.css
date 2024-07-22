@@ -1,0 +1,11 @@
+.taskPageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.taskListContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}
