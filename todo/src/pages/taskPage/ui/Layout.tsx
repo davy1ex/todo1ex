@@ -9,10 +9,12 @@ import style from './TaskPage.module.css'
 
 export function Layout({
     listName, 
-    tasks
+    tasks,
+    addTask
 }: {
     listName: string;
-    tasks: []
+    tasks,
+    addTask: (name: string) => void;
 }) {
     return (
         <div className={style.taskPageContainer}>
@@ -22,7 +24,7 @@ export function Layout({
                 <h1>{listName}</h1>
 
                 <hr/>
-                < InputTask />
+                < InputTask addTask={addTask} />
                 < TaskList tasks={tasks} />
                 
             </div>
